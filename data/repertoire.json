@@ -1,0 +1,2395 @@
+{
+  "version": 2.2,
+  "suites": [
+    {
+      "id": "suite-01",
+      "number": "01",
+      "type": "Reels",
+      "partition": "partitions/Suite_01.png",
+      "tunes": [
+        {
+          "id": "ships-are-sailing",
+          "title": "Ships are Sailing",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 001 Ships  _ Castle/001_01 Ships are Sailing/00101 90 Ships are Sailing Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 001 Ships  _ Castle/001_01 Ships are Sailing/00101 01 Ships are Sailing Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 001 Ships  _ Castle/001_01 Ships are Sailing/00101 02 Ships are Sailing Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "castle-kelly",
+          "title": "Castle Kelly",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 001 Ships  _ Castle/001-02 Castle Kelly/00102 90 Castle Kelly Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 001 Ships  _ Castle/001-02 Castle Kelly/00102 01 Castle Kelly Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 001 Ships  _ Castle/001-02 Castle Kelly/00102 02 Castle Kelly Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-02",
+      "number": "02",
+      "type": "Jigs",
+      "partition": "partitions/Suite_02.png",
+      "tunes": [
+        {
+          "id": "tatter-jack-walsh",
+          "title": "Tatter Jack Walsh",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_01 Tatter Jack Walsh/00201 90 Tatter Jack Walsh Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_01 Tatter Jack Walsh/00201 01 Tatter Jack Walsh Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_01 Tatter Jack Walsh/00201 02 Tatter Jack Walsh Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "garrett-barry-s",
+          "title": "Garrett Barry's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_02 Garrett Barry/00202 90 Garrett Barry Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_02 Garrett Barry/00202 01 Garrett Barry Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_02 Garrett Barry/00202 02 Garrett Barry Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "cook-in-the-kitchen",
+          "title": "Cook in the Kitchen",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_03 Cook in the Kitchen/00203 90 Cook in the Kitchen Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_03 Cook in the Kitchen/00203 01 Cook in the Kitchen Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_03 Cook in the Kitchen/00203 02 Cook in the Kitchen Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_03 Cook in the Kitchen/00203 03 Cook in the Kitchen Partie C.mp3"
+            }
+          ]
+        },
+        {
+          "id": "pipe-on-the-hob",
+          "title": "Pipe on the Hob",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_04 Pipe on the Hob/00204 90 Pipe on the Hob Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_04 Pipe on the Hob/00204 01 Pipe on the Hob Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 002 Tatter _ Garrett _ Cook  _ Pipe/002_04 Pipe on the Hob/00204 02 Pipe on the Hob Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-03",
+      "number": "03",
+      "type": "Polkas",
+      "partition": "partitions/Suite_03.png",
+      "tunes": [
+        {
+          "id": "toormore-1",
+          "title": "Toormore 1",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_01 Toormore 1/00301 90 Toormore Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_01 Toormore 1/00301 01 Toormore Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_01 Toormore 1/00301 02 Toormore Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "maid-of-ardagh",
+          "title": "Maid of Ardagh",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_02 Maid of Ardagh/00302 90 Maid of Ardagh Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_02 Maid of Ardagh/00302 01 Maid of Ardagh Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_02 Maid of Ardagh/00302 02 Maid of Ardagh Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "john-egan-s",
+          "title": "John Egan's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_03 John Egan/00303 90 John Egan s Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_03 John Egan/00303 01 John Egan s Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 003 Toormore_ Maid  _ John/003_03 John Egan/00303 02 John Egan s Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-04",
+      "number": "04",
+      "type": "Reels",
+      "partition": "partitions/Suite_04.png",
+      "tunes": [
+        {
+          "id": "cooley-s",
+          "title": "Cooley's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 004 Cooley s _ Wise Maid/004_01 Cooley s/00401 90 Cooley s Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 004 Cooley s _ Wise Maid/004_01 Cooley s/00401 01 Cooley s Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 004 Cooley s _ Wise Maid/004_01 Cooley s/00401 02 Cooley s Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "wise-maid",
+          "title": "Wise Maid",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 004 Cooley s _ Wise Maid/004_02 Wise Maid/00402 90 Wise Maid Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 004 Cooley s _ Wise Maid/004_02 Wise Maid/00402 01 Wise Maid Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 004 Cooley s _ Wise Maid/004_02 Wise Maid/00402 02 Wise Maid Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-05",
+      "number": "05",
+      "type": "Jigs",
+      "partition": "partitions/Suite_05.png",
+      "tunes": [
+        {
+          "id": "my-darling-asleep",
+          "title": "My Darling Asleep",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_01 Darling Asleep/00501 90 Darling Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_01 Darling Asleep/00501 01 Darling Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_01 Darling Asleep/00501 02 Darling Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "kesh-jig",
+          "title": "Kesh Jig",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_02 Kesh/00502 90 Kesh Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_02 Kesh/00502 01 Kesh Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_02 Kesh/00502 02 Kesh Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "hag-at-the-churn",
+          "title": "Hag at the Churn",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_03 Hag at the Churn/00503 90 Hag at the Churn Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_03 Hag at the Churn/00503 01 Hag at the Churn Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 005 Darling Asleep _  Kesh _ Hag at the Churn/005_03 Hag at the Churn/00503 02 Hag at the Churn Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-06",
+      "number": "06",
+      "type": "Hornpipes",
+      "partition": "partitions/Suite_06.png",
+      "tunes": [
+        {
+          "id": "right-of-man",
+          "title": "Right of Man",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 006 Rights of Man _ Pride of Petravore/006_01 Rights of Man/00601 90 Rights of Man Partie Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 006 Rights of Man _ Pride of Petravore/006_01 Rights of Man/00601 01 Rights of Man Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 006 Rights of Man _ Pride of Petravore/006_01 Rights of Man/00601 02 Rights of Man Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "pride-of-petravore",
+          "title": "Pride of Petravore",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 006 Rights of Man _ Pride of Petravore/006_02 Pride of Petravore/00602 90 Pride of Petravore Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 006 Rights of Man _ Pride of Petravore/006_02 Pride of Petravore/00602 01 Pride of Petravore Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 006 Rights of Man _ Pride of Petravore/006_02 Pride of Petravore/00602 02 Pride of Petravore Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-07",
+      "number": "07",
+      "type": "Reels",
+      "partition": "partitions/Suite_07.png",
+      "tunes": [
+        {
+          "id": "pigeon-on-the-gate",
+          "title": "Pigeon on the Gate",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_01 Pigeon on the Gate/00701 90 Pigeon on the Gate Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_01 Pigeon on the Gate/00701 01 Pigeon on the Gate Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_01 Pigeon on the Gate/00701 02 Pigeon on the Gate Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "golden-keyboard",
+          "title": "Golden Keyboard",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_02 Golden Keyboard/00702 90 Golden Keyboard Entier .mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_02 Golden Keyboard/00702 01 Golden Keyboard Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_02 Golden Keyboard/00702 02 Golden Keyboard Partie B .mp3"
+            }
+          ]
+        },
+        {
+          "id": "sally-garden",
+          "title": "Sally Garden",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_03 Sally Gardens/00703 90 Sally Gardens Entier .mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_03 Sally Gardens/00703 01 Sally Gardens Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 007 Pigeon _Golden _ Sally/007_03 Sally Gardens/00703 02 Sally Gardens Partie B .mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-08",
+      "number": "08",
+      "type": "Reels",
+      "partition": "partitions/Suite_08.png",
+      "tunes": [
+        {
+          "id": "father-kelly",
+          "title": "Father Kelly",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 008 Father Kelly _ Green Fields/008_01 Father Kelly s/00801 90 Father Kelly s Entier .mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 008 Father Kelly _ Green Fields/008_01 Father Kelly s/00801 01 Father Kelly s Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 008 Father Kelly _ Green Fields/008_01 Father Kelly s/00801 02 Father Kelly s Partie B .mp3"
+            }
+          ]
+        },
+        {
+          "id": "green-fields-of-america",
+          "title": "Green Fields of America",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 008 Father Kelly _ Green Fields/008_02 Green Fields of America/00802 90 Green Fields of America Entier .mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 008 Father Kelly _ Green Fields/008_02 Green Fields of America/00802 01 Green Fields of America Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 008 Father Kelly _ Green Fields/008_02 Green Fields of America/00802 02 Green Fields of America Partie B .mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-09",
+      "number": "09",
+      "type": "Jigs",
+      "partition": "partitions/Suite_09.png",
+      "tunes": [
+        {
+          "id": "humours-of-glendart",
+          "title": "Humours of Glendart",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "out-on-the-ocean",
+          "title": "Out on the Ocean",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 009 Ocean_Home with me_Saddle Pony/009_02 Out on the Ocean/00902 90 Out on The Ocean Entier .mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 009 Ocean_Home with me_Saddle Pony/009_02 Out on the Ocean/00902 01 Out on The Ocean Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 009 Ocean_Home with me_Saddle Pony/009_02 Out on the Ocean/00902 02 Out on The Ocean Partie B .mp3"
+            }
+          ]
+        },
+        {
+          "id": "will-you-come-home-with-me",
+          "title": "Will You Come Home With Me",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 009 Ocean_Home with me_Saddle Pony/009_03 Will You Come/00903 90 Will You Come on With Me Entier .mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 009 Ocean_Home with me_Saddle Pony/009_03 Will You Come/00903 01 Will You Come on With Me Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 009 Ocean_Home with me_Saddle Pony/009_03 Will You Come/00903 02 Will You Come on With Me Partie B .mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-10",
+      "number": "10",
+      "type": "Slip Jigs",
+      "partition": "partitions/Suite_10.png",
+      "tunes": [
+        {
+          "id": "kid-on-the-mountain",
+          "title": "Kid on the Mountain",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_01 Kid on the Mountain/01001 90 Kid on the mountain Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_01 Kid on the Mountain/01001 01 Kid on the mountain Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_01 Kid on the Mountain/01001 02 Kid on the mountain Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_01 Kid on the Mountain/01001 03 Kid on the mountain Partie C.mp3"
+            },
+            {
+              "label": "Partie D",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_01 Kid on the Mountain/01001 04 Kid on the mountain Partie D.mp3"
+            },
+            {
+              "label": "Partie E",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_01 Kid on the Mountain/01001 05 Kid on the mountain Partie E.mp3"
+            }
+          ]
+        },
+        {
+          "id": "fig-for-a-kiss",
+          "title": "Fig for a Kiss",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_02 Fig for a Kiss/01002 90 Fig for a Kiss Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_02 Fig for a Kiss/01002 01 Fig for a Kiss Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 010 Kid Mountain _ Fig for a Kiss/010_02 Fig for a Kiss/01002 02 Fig for a Kiss Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "butterfly",
+          "title": "Butterfly",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-11",
+      "number": "11",
+      "type": "Reels",
+      "partition": "partitions/Suite_11.png",
+      "tunes": [
+        {
+          "id": "old-bush",
+          "title": "Old Bush",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_01 Old Bush/01101 90 Old Bush Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_01 Old Bush/01101 01 Old Bush Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_01 Old Bush/01101 02 Old Bush Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "bucks-of-oranmore",
+          "title": "Bucks of Oranmore",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_02 Bucks of Oran/01102 90 Bucks of Oranmore Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_02 Bucks of Oran/01102 01 Bucks of Oranmore Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_02 Bucks of Oran/01102 02 Bucks of Oranmore Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_02 Bucks of Oran/01102 03 Bucks of Oranmore Partie C.mp3"
+            },
+            {
+              "label": "Partie D",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_02 Bucks of Oran/01102 04 Bucks of Oranmore Partie D.mp3"
+            },
+            {
+              "label": "Partie E",
+              "file": "Suite 011 Old Bush _ Bucks of Oran/011_02 Bucks of Oran/01102 05 Bucks of Oranmore Partie E.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-12",
+      "number": "12",
+      "type": "Jigs",
+      "partition": "partitions/Suite_12.png",
+      "tunes": [
+        {
+          "id": "donnybrook-fair",
+          "title": "Donnybrook Fair",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_01 Donnybrook Fair/01201 90 Donnybrook Fair En Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_01 Donnybrook Fair/01201 01 Donnybrook Fair Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_01 Donnybrook Fair/01201 02 Donnybrook Fair Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "connaughtman-s-ramble",
+          "title": "Connaughtman's Ramble",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_02 Connaughtman s Ramble/01202 90 Connaughtman En Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_02 Connaughtman s Ramble/01202 01 Connaughtman Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_02 Connaughtman s Ramble/01202 02 Connaughtman Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "rose-in-the-heather",
+          "title": "Rose in the Heather",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_03 Rose in the Heather/01203 90 Rose in the Heather En Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_03 Rose in the Heather/01203 01 Rose in the Heather Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 012 Donnybrook _ Connaughtman _ Rose  Heather/012_03 Rose in the Heather/01203 02 Rose in the Heather Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-13",
+      "number": "13",
+      "type": "Slides",
+      "partition": "partitions/Suite_13.png",
+      "tunes": [
+        {
+          "id": "brosna-slide",
+          "title": "Brosna Slide",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 013 Brosna _ Dan O Keeffe s/013_01 Brosna Slide/01301 90 Brosna Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 013 Brosna _ Dan O Keeffe s/013_01 Brosna Slide/01301 01 Brosna Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 013 Brosna _ Dan O Keeffe s/013_01 Brosna Slide/01301 02 Brosna Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "dan-o-keeffe-s",
+          "title": "Dan O'Keeffe's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 013 Brosna _ Dan O Keeffe s/013_02 Dan O Keeffe s/01302 90 Dan O Keeffe Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 013 Brosna _ Dan O Keeffe s/013_02 Dan O Keeffe s/01302 01 Dan O Keeffe Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 013 Brosna _ Dan O Keeffe s/013_02 Dan O Keeffe s/01302 02 Dan O Keeffe Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-14",
+      "number": "14",
+      "type": "Reels",
+      "partition": "partitions/Suite_14.png",
+      "tunes": [
+        {
+          "id": "teatotaler-s",
+          "title": "Teatotaler's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_01 Teatotaler s/01401 90 Teatotaler s Morceau.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_01 Teatotaler s/01401 01 Teatotaler s Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_01 Teatotaler s/01401 02 Teatotaler s Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "cup-of-tea",
+          "title": "Cup of Tea",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_02 Cup of Tea/01402 90 Cup of Tea Morceau.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_02 Cup of Tea/01402 01 Cup of Tea Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_02 Cup of Tea/01402 02 Cup of Tea Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_02 Cup of Tea/01402 03 Cup of Tea Partie C.mp3"
+            }
+          ]
+        },
+        {
+          "id": "drowsy-maggie",
+          "title": "Drowsy Maggie",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_03 Drowsy Maggie/01403 90 Drowsy Maggie Morceau.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_03 Drowsy Maggie/01403 01 Drowsy Maggie Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 014 Teatotaler s _ Cup of Tea _ Drowsy Maggie/014_03 Drowsy Maggie/01403 02 Drowsy Maggie Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-15",
+      "number": "15",
+      "type": "Jigs",
+      "partition": "partitions/Suite_15.png",
+      "tunes": [
+        {
+          "id": "woodcock",
+          "title": "Woodcock",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_01 Woodcock/01501 90 Woodcock Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_01 Woodcock/01501 01 Woodcock Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_01 Woodcock/01501 02 Woodcock Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "kerfunten",
+          "title": "Kerfunten",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_02 Kerfunten/01502 90 Kerfunten Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_02 Kerfunten/01502 01 Kerfunten Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_02 Kerfunten/01502 02 Kerfunten Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "dusty-windowsills",
+          "title": "Dusty Windowsills",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_03 Dusty Window/01503 90 Dusty Windowsills Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_03 Dusty Window/01503 01 Dusty Windowsills Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_03 Dusty Window/01503 02 Dusty Windowsills Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 015 Woodcock _ Kerfunten _ Dusty Window/015_03 Dusty Window/01503 03 Dusty Windowsills Partie C.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-16",
+      "number": "16",
+      "type": "Hornpipes",
+      "partition": "partitions/Suite_16.png",
+      "tunes": [
+        {
+          "id": "bantry-bay",
+          "title": "Bantry Bay",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_01 Banttry/01601 90 Bantry Bay en entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_01 Banttry/01601 01 Bantry Bay Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_01 Banttry/01601 02 Bantry Bay Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "o-mahoney-s",
+          "title": "O'Mahoney's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_02 Mahoney/01602 90 O Mahoney En Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_02 Mahoney/01602 01 O Mahoney Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_02 Mahoney/01602 02 O Mahoney Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "liverpool",
+          "title": "Liverpool",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_03 Liverpool/01603 90 Liverpool Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_03 Liverpool/01603 01 Liverpool Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 016 Bantry _ Mahoney _ Liverpool/016_03 Liverpool/01603 02 Liverpool Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-17",
+      "number": "17",
+      "type": "Reels",
+      "partition": "partitions/Suite_17.png",
+      "tunes": [
+        {
+          "id": "new-copperplate",
+          "title": "New Copperplate",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_01 New Copperplate/01701 90 New Copper Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_01 New Copperplate/01701 01 New Copper Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_01 New Copperplate/01701 02 New Copper Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "old-copperplate",
+          "title": "Old Copperplate",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_02 Old Copperplate/01702 90 Old Copper Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_02 Old Copperplate/01702 01 Old Copper Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_02 Old Copperplate/01702 02 Old Copper Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "hunter-s-house",
+          "title": "Hunter's House",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_03 Hunter s House/01703 90 Hunter s Houser Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_03 Hunter s House/01703 01 Hunter s Houser Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 017 New Copper _ Old Copper _ Hunter s House/017_03 Hunter s House/01703 02 Hunter s Houser Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-18",
+      "number": "18",
+      "type": "Reels",
+      "partition": "partitions/Suite_18.png",
+      "tunes": [
+        {
+          "id": "chicago-reel",
+          "title": "Chicago Reel",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 018 Chicago _ Humour of Tulla/018_01 Chicago/01801 99 Chicago Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 018 Chicago _ Humour of Tulla/018_01 Chicago/01801 01 Chicago Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 018 Chicago _ Humour of Tulla/018_01 Chicago/01801 02 Chicago Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "humours-of-tulla",
+          "title": "Humours of Tulla",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 018 Chicago _ Humour of Tulla/018_02 Humour of Tulla/01802 03 Humour of Tulla Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 018 Chicago _ Humour of Tulla/018_02 Humour of Tulla/01802 01 Humour of Tulla Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 018 Chicago _ Humour of Tulla/018_02 Humour of Tulla/01802 02 Humour of Tulla Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-19",
+      "number": "19",
+      "type": "Reels",
+      "partition": "partitions/Suite_19.png",
+      "tunes": [
+        {
+          "id": "boys-of-malin",
+          "title": "Boys of Malin",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_01 Boys of Malin/01901 99 Boys of Malin Morceau entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_01 Boys of Malin/01901 01 Boys of Malin Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_01 Boys of Malin/01901 02 Boys of Malin Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_01 Boys of Malin/01901 03 Boys of Malin Partie C.mp3"
+            }
+          ]
+        },
+        {
+          "id": "gravel-walk",
+          "title": "Gravel Walk",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_02 Gravel Walk/01902 99 Gravel Walk Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_02 Gravel Walk/01902 01 Gravel Walk Morceau Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_02 Gravel Walk/01902 02 Gravel Walk Morceau Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_02 Gravel Walk/01902 03 Gravel Walk Morceau Partie C.mp3"
+            },
+            {
+              "label": "Partie D",
+              "file": "Suite 019 Boys of Malin _ Gravel Walk/019_02 Gravel Walk/01902 04 Gravel Walk Morceau Partie D.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-20",
+      "number": "20",
+      "type": "Jigs",
+      "partition": "partitions/Suite_20.png",
+      "tunes": [
+        {
+          "id": "slieve-russel",
+          "title": "Slieve Russel",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_01 Slieve Russel/02001 99 Slieve Russel Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_01 Slieve Russel/02001 01 Slieve Russel Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_01 Slieve Russel/02001 02 Slieve Russel Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "jimmy-ward",
+          "title": "Jimmy Ward",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_02 Jimmy Ward/02002 99 Jimmy Ward Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_02 Jimmy Ward/02002 01 Jimmy Ward Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_02 Jimmy Ward/02002 02 Jimmy Ward Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "the-butcher-s-fancy",
+          "title": "The Butcher's Fancy",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_03 Butcher s Fancy/02003 99 Butcher s Fancy Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_03 Butcher s Fancy/02003 01 Butcher s Fancy Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 020 Slieve Russel _ Jimmy Ward _ Butcher s Fancy/020_03 Butcher s Fancy/02003 02 Butcher s Fancy Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-21",
+      "number": "21",
+      "type": "Flings",
+      "partition": "partitions/Suite_21.png",
+      "tunes": [
+        {
+          "id": "keel-row-the",
+          "title": "Keel Row (The)",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_01 The Keel Row/02101 90 Keel Row Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_01 The Keel Row/02101 01 Keel Row Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_01 The Keel Row/02101 02 Keel Row Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "some-say-the-divil-s-dead",
+          "title": "Some Say the Divil's Dead",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_02 Some Say the Divil s Dead/02102 99 Some Say the Morceau.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_02 Some Say the Divil s Dead/02102 01 Some Say the  Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_02 Some Say the Divil s Dead/02102 02 Some Say the  Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "doon-the",
+          "title": "Doon (The)",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_03 The Doon/02103 90 The Doon Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_03 The Doon/02103 01 The Doon Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 021 Keel Row _ Some Say the Divil s Dead _ Doon/021_03 The Doon/02103 02 The Doon Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-22",
+      "number": "22",
+      "type": "Jigs",
+      "partition": "partitions/Suite_22.png",
+      "tunes": [
+        {
+          "id": "christy-barry",
+          "title": "Christy Barry",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 022 Christy Barry s _ Butlers Glen Avenue _ Killavil/022_01 Christy Barry s/02201 90 Christy Barry  Morceau Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 022 Christy Barry s _ Butlers Glen Avenue _ Killavil/022_01 Christy Barry s/02201 01 Christy Barry s  Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 022 Christy Barry s _ Butlers Glen Avenue _ Killavil/022_01 Christy Barry s/02201 02 Christy Barry s Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "butlers-of-glen-avenue",
+          "title": "Butlers of Glen Avenue",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "killavil-jig",
+          "title": "Killavil Jig",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 022 Christy Barry s _ Butlers Glen Avenue _ Killavil/022_03 Killavil/02203 90 Killavil Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 022 Christy Barry s _ Butlers Glen Avenue _ Killavil/022_03 Killavil/02203 01 Killavil Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 022 Christy Barry s _ Butlers Glen Avenue _ Killavil/022_03 Killavil/02203 02 Killavil Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-23",
+      "number": "23",
+      "type": "Reels",
+      "partition": "partitions/Suite_23.png",
+      "tunes": [
+        {
+          "id": "walter-sammon-s-grandmother",
+          "title": "Walter Sammon's Grandmother",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_01 Walter Sammon s GM/02301 90 Walter Sammons  Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_01 Walter Sammon s GM/02301 01 Walter Sammons  Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_01 Walter Sammon s GM/02301 02 Walter Sammons  Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "concertina",
+          "title": "Concertina",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_02 Concertina/02302 90 Concertina  Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_02 Concertina/02302 01 Concertina  Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_02 Concertina/02302 02 Concertina  Partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "brendan-mac-mahon-s",
+          "title": "Brendan Mac Mahon's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_03 Brendan Mac Mahon s/02303 90 Brendan Mac Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_03 Brendan Mac Mahon s/02303 01 Brendan Mac Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 023 Walter Sammon s_Concertina_Brendan/023_03 Brendan Mac Mahon s/02303 02 Brendan Mac Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-24",
+      "number": "24",
+      "type": "Reels",
+      "partition": "partitions/Suite_24.png",
+      "tunes": [
+        {
+          "id": "boy-in-the-gap",
+          "title": "Boy in the Gap",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_01 Boys in the Gap/02401 04 Boys in the Gap Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_01 Boys in the Gap/02401 01 Boys in the Gap  Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_01 Boys in the Gap/02401 02 Boys in the Gap  Partie B.mp3"
+            },
+            {
+              "label": "Partie C",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_01 Boys in the Gap/02401 03 Boys in the Gap  Partie C.mp3"
+            }
+          ]
+        },
+        {
+          "id": "toss-the-feathers-1",
+          "title": "Toss the Feathers #1",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_02 Toss the Feathers 1/02402 03 Toss the Feathers 1 Entier.mp3"
+            }
+          ]
+        },
+        {
+          "id": "toss-the-feathers-2",
+          "title": "Toss the Feathers #2",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_03 Toss the Feathers 2/02403 03 Toss the Feathers 2 Entier.mp3"
+            }
+          ]
+        },
+        {
+          "id": "saint-anne-s-reel",
+          "title": "Saint Anne's Reel",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_04 Saint Anne/02404 03 Saint Anne Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_04 Saint Anne/02404 01 Saint Anne  Partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 024 Boys in the Gap_Toss the Feather 1 & 2_St Anne/024_04 Saint Anne/02404 02 Saint Anne  Partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-25",
+      "number": "25",
+      "type": "Waltzes",
+      "partition": "partitions/Suite_25.png",
+      "tunes": [
+        {
+          "id": "new-land",
+          "title": "New Land",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 025 New Land_Midnight on the Water/025_01 New Land/02501 90 New Land Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 025 New Land_Midnight on the Water/025_01 New Land/02501 01 New Land partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 025 New Land_Midnight on the Water/025_01 New Land/02501 02 New Land partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "midnight-on-the-water",
+          "title": "Midnight on the Water",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 025 New Land_Midnight on the Water/025_02 Midnight on the Water/02502 90 Midnight on the Water Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 025 New Land_Midnight on the Water/025_02 Midnight on the Water/02502 01 Midnight on the Water partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 025 New Land_Midnight on the Water/025_02 Midnight on the Water/02502 02 Midnight on the Water partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-26",
+      "number": "26",
+      "type": "Polkas",
+      "partition": "partitions/Suite_26.png",
+      "tunes": [
+        {
+          "id": "charlie-harris",
+          "title": "Charlie Harris",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 026 Charlie Harris_Finnish/026_01 Charlie Harris/02601 90 Charlie Harris Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 026 Charlie Harris_Finnish/026_01 Charlie Harris/02601 01 Charlie Harris partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 026 Charlie Harris_Finnish/026_01 Charlie Harris/02601 02 Charlie Harris partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "finnish",
+          "title": "Finnish",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 026 Charlie Harris_Finnish/026_02 Finnish/02602 90 Finnish Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 026 Charlie Harris_Finnish/026_02 Finnish/02602 01 Finnish partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 026 Charlie Harris_Finnish/026_02 Finnish/02602 02 Finnish partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-27",
+      "number": "27",
+      "type": "Polkas",
+      "partition": "partitions/Suite_27.png",
+      "tunes": [
+        {
+          "id": "jessica-s-polka",
+          "title": "Jessica's Polka",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_01 Jessica/02701 90 Jessica Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_01 Jessica/02701 01 Jessica partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_01 Jessica/02701 02 Jessica partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "on-those-britches-full-of-stitches",
+          "title": "On Those Britches Full of Stitches",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 90 Bill Sullivan Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 01 Bill Sullivan partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 02 Bill Sullivan partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "bill-sullivan-s",
+          "title": "Bill Sullivan's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 90  Britches Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 01 Britches partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 02 Britches partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-28",
+      "number": "28",
+      "type": "Reels",
+      "partition": "partitions/Suite_28.png",
+      "tunes": [
+        {
+          "id": "cloone",
+          "title": "Cloone",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_01 Cloone/02801 90 Cloone Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_01 Cloone/02801 01 Cloone partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_01 Cloone/02801 02 Cloone partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "boy-in-the-boat",
+          "title": "Boy in the Boat",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_02 Boy in the Boat/02802 90 Boy Boat Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_02 Boy in the Boat/02802 01 Boy Boat partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_02 Boy in the Boat/02802 02 Boy Boat partie B.mp3"
+            }
+          ]
+        },
+        {
+          "id": "john-dwyer-s",
+          "title": "John Dwyer's",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_03 John Dwyer s/02803 90 Dwyer Entier.mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_03 John Dwyer s/02803 01 Dwyer partie A.mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 028 Cloone_Boy in the Boat_John Dwyer s/028_03 John Dwyer s/02803 02 Dwyer partie B.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-29",
+      "number": "29",
+      "type": "Reels",
+      "partition": "partitions/Suite_29.png",
+      "tunes": [
+        {
+          "id": "star-of-munster",
+          "title": "Star of Munster",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "maid-behind-the-bar",
+          "title": "Maid Behind the Bar",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-30",
+      "number": "30",
+      "type": "Reels",
+      "partition": "partitions/Suite_30.png",
+      "tunes": [
+        {
+          "id": "salamanca",
+          "title": "Salamanca",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Suite entière",
+              "file": "Suite 030 Salamanca_Banshee_Sailor/03099 99 Salamanca_Banshee_Sailor.mp3"
+            }
+          ]
+        },
+        {
+          "id": "banshee",
+          "title": "Banshee",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "sailor-s-bonnet",
+          "title": "Sailor's Bonnet",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-31",
+      "number": "31",
+      "type": "Jigs",
+      "partition": "partitions/Suite_31.png",
+      "tunes": [
+        {
+          "id": "haste-to-the-wedding",
+          "title": "Haste to the Wedding",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Suite entière",
+              "file": "Suite 031 Haste _ Saddle _ Father/031_02 Saddle the Pony/03199 90 Haste_Saddle_Father  .mp3"
+            }
+          ]
+        },
+        {
+          "id": "saddle-the-pony",
+          "title": "Saddle the Pony",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Morceau entier",
+              "file": "Suite 031 Haste _ Saddle _ Father/031_02 Saddle the Pony/03102 90 Saddle Entier .mp3"
+            },
+            {
+              "label": "Partie A",
+              "file": "Suite 031 Haste _ Saddle _ Father/031_02 Saddle the Pony/03102 01 Saddle Partie A .mp3"
+            },
+            {
+              "label": "Partie B",
+              "file": "Suite 031 Haste _ Saddle _ Father/031_02 Saddle the Pony/03102 02 Saddle Partie B .mp3"
+            }
+          ]
+        },
+        {
+          "id": "father-o-flynn-s",
+          "title": "Father O'Flynn's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-32",
+      "number": "32",
+      "type": "Waltzes",
+      "partition": "partitions/Suite_32.png",
+      "tunes": [
+        {
+          "id": "elsey-s",
+          "title": "Elsey's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "17th-of-july",
+          "title": "17th of July",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-33",
+      "number": "33",
+      "type": "Reels",
+      "partition": "partitions/Suite_33.png",
+      "tunes": [
+        {
+          "id": "humours-of-ballyconnell",
+          "title": "Humours of Ballyconnell",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "drunken-landlady",
+          "title": "Drunken Landlady",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "turnpike-gate",
+          "title": "Turnpike Gate",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-34",
+      "number": "34",
+      "type": "Jigs",
+      "partition": "partitions/Suite_34.png",
+      "tunes": [
+        {
+          "id": "tom-billy-s-2",
+          "title": "Tom Billy's #2",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Suite entière",
+              "file": "Suite 034 Tom Billy_Monk s/03490 99 Tom Billy_Monk s.mp3"
+            }
+          ]
+        },
+        {
+          "id": "monk-s",
+          "title": "Monk's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "tom-billy-s-1",
+          "title": "Tom Billy's #1",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-35",
+      "number": "35",
+      "type": "Reels",
+      "partition": "partitions/Suite_35.png",
+      "tunes": [
+        {
+          "id": "within-a-mile-of-dublin",
+          "title": "Within a Mile of Dublin",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "the-crooked-road-to-dublin",
+          "title": "The Crooked Road to Dublin",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "bird-in-the-bush",
+          "title": "Bird in the Bush",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-36",
+      "number": "36",
+      "type": "Jigs",
+      "partition": "partitions/Suite_36.png",
+      "tunes": [
+        {
+          "id": "old-joe-s-jig",
+          "title": "Old Joe's Jig",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Suite entière",
+              "file": "Suite 036 Old Joe Jig_Gold Ring/03699 99 Old Joe_Gold ring.mp3"
+            }
+          ]
+        },
+        {
+          "id": "gold-ring",
+          "title": "Gold Ring",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-37",
+      "number": "37",
+      "type": "Reels",
+      "partition": "partitions/Suite_37.png",
+      "tunes": [
+        {
+          "id": "shaskeen",
+          "title": "Shaskeen",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "lady-ann-montgomery",
+          "title": "Lady Ann Montgomery",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "christmas-eve",
+          "title": "Christmas Eve",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-38",
+      "number": "38",
+      "type": "Polkas",
+      "partition": "partitions/Suite_38.png",
+      "tunes": [
+        {
+          "id": "gullane",
+          "title": "Gullane",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "mrs-crowley-s",
+          "title": "Mrs Crowley's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "jimmy-doyle",
+          "title": "Jimmy Doyle",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-39",
+      "number": "39",
+      "type": "Slip Jigs",
+      "partition": "partitions/Suite_39.png",
+      "tunes": [
+        {
+          "id": "swaggering",
+          "title": "Swaggering",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "foxhunter-s",
+          "title": "Foxhunter's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "boys-of-ballysodare",
+          "title": "Boys of Ballysodare",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-40",
+      "number": "40",
+      "type": "Slides",
+      "partition": "partitions/Suite_40.png",
+      "tunes": [
+        {
+          "id": "old-favourite",
+          "title": "Old Favourite",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "michael-russell-s",
+          "title": "Michael Russell's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "eileen-ni-riordains",
+          "title": "Eileen Ni Riordains",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-41",
+      "number": "41",
+      "type": "Hornpipes",
+      "partition": "partitions/Suite_41.png",
+      "tunes": [
+        {
+          "id": "boys-of-bluehill",
+          "title": "Boys of Bluehill",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "harvest-home",
+          "title": "Harvest Home",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-42",
+      "number": "42",
+      "type": "Inconnu",
+      "partition": "partitions/Suite_42.png",
+      "tunes": [
+        {
+          "id": "tim-mahoney-s",
+          "title": "Tim Mahoney's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "bag-of-spuds",
+          "title": "Bag of Spuds",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "red-haired-lass",
+          "title": "Red Haired Lass",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-43",
+      "number": "43",
+      "type": "Hornpipes",
+      "partition": "partitions/Suite_43.png",
+      "tunes": [
+        {
+          "id": "boys-of-ballycastle",
+          "title": "Boys of Ballycastle",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Version lente",
+              "file": "Suite 043 Ballycastle_Barley_Rye/043 01 Boys of Ballycastle/043 01 Boys of Ballycastle lent.mp3"
+            },
+            {
+              "label": "À tempo",
+              "file": "Suite 043 Ballycastle_Barley_Rye/043 01 Boys of Ballycastle/043 01 Boys of Ballycastle a tempo.mp3"
+            }
+          ]
+        },
+        {
+          "id": "stack-of-barley",
+          "title": "Stack of Barley",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Version lente",
+              "file": "Suite 043 Ballycastle_Barley_Rye/043 02 Stack of Barley/043 02 Stack of Barley lent.mp3"
+            },
+            {
+              "label": "À tempo",
+              "file": "Suite 043 Ballycastle_Barley_Rye/043 02 Stack of Barley/043 02 Stack of Barley a tempo.mp3"
+            }
+          ]
+        },
+        {
+          "id": "stack-of-rye",
+          "title": "Stack of Rye",
+          "key": "",
+          "notes": "",
+          "audio": [
+            {
+              "label": "Version lente",
+              "file": "Suite 043 Ballycastle_Barley_Rye/043 03 Stack of Rye/043 03 Stack of Rye lent.mp3"
+            },
+            {
+              "label": "À tempo",
+              "file": "Suite 043 Ballycastle_Barley_Rye/043 03 Stack of Rye/043 03 Stack of Rye a tempo.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suite-44",
+      "number": "44",
+      "type": "Jigs",
+      "partition": "partitions/Suite_44.png",
+      "tunes": [
+        {
+          "id": "miller-s-maggot",
+          "title": "Miller's Maggot",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "i-was-born-for-sport",
+          "title": "I Was Born for Sport",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "anthony-frawley-s",
+          "title": "Anthony Frawley's",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-45",
+      "number": "45",
+      "type": "Reels",
+      "partition": "partitions/Suite_45.png",
+      "tunes": [
+        {
+          "id": "humours-of-castlefin",
+          "title": "Humours of Castlefin",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "glen-of-aherlow",
+          "title": "Glen of Aherlow",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "killarney-boys-of-pleasure",
+          "title": "Killarney Boys of Pleasure",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-46",
+      "number": "46",
+      "type": "Inconnu",
+      "partition": "partitions/Suite_46.png",
+      "tunes": [
+        {
+          "id": "king-of-fairies",
+          "title": "King of Fairies",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "gypsy-princess",
+          "title": "Gypsy Princess",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-47",
+      "number": "47",
+      "type": "Jigs",
+      "partition": "partitions/Suite_47.png",
+      "tunes": [
+        {
+          "id": "the-swallow-s-tail",
+          "title": "The Swallow's Tail",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "road-to-sligo",
+          "title": "Road to Sligo",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "tripping-up-the-stairs",
+          "title": "Tripping Up the Stairs",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-48",
+      "number": "48",
+      "type": "Reels",
+      "partition": "partitions/Suite_48.png",
+      "tunes": [
+        {
+          "id": "sporting-paddy",
+          "title": "Sporting Paddy",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "jolly-tinker",
+          "title": "Jolly Tinker",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-49",
+      "number": "49",
+      "type": "Inconnu",
+      "partition": "partitions/Suite_49.png",
+      "tunes": [
+        {
+          "id": "life-is-all-checkered",
+          "title": "Life Is All Checkered",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "lark-s-march",
+          "title": "Lark's March",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    },
+    {
+      "id": "suite-50",
+      "number": "50",
+      "type": "Inconnu",
+      "partition": "partitions/Suite_50.png",
+      "tunes": [
+        {
+          "id": "sangshyttevalsen",
+          "title": "Sangshyttevalsen",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "far-away",
+          "title": "Far Away",
+          "key": "",
+          "notes": "",
+          "audio": []
+        },
+        {
+          "id": "sangshyttevalsen",
+          "title": "Sangshyttevalsen",
+          "key": "",
+          "notes": "",
+          "audio": []
+        }
+      ]
+    }
+  ]
+}
