@@ -1,5 +1,7 @@
 let suites = [];
 let active = null;
+let activeSuite = null;
+let fullPartitionMode = false;
 let wakeLock = null;
 let currentAudio = null;
 let scoreZoom = 1;
@@ -35,23 +37,27 @@ function searchMatches() {
 function syncFilters(source) {
   const matches = searchMatches();
   const oldNumber = $("num").value;
+  const oldType = $("type").value;
   const availableNumbers = matches.map(suite => suite.number);
+  const availableTypes = [...new Set(matches.map(suite => suite.type))].sort();
 
   replaceOptions($("num"), availableNumbers, oldNumber);
+  replaceOptions($("type"), availableTypes, oldType);
 
   if (source === "search") {
     if (matches.length === 1) {
       $("num").value = matches[0].number;
       $("type").value = matches[0].type;
     } else {
-      const types = [...new Set(matches.map(suite => suite.type))];
       $("num").value = "";
-      $("type").value = types.length === 1 ? types[0] : "";
+      $("type").value = availableTypes.length === 1 ? availableTypes[0] : "";
     }
   }
 
   if (source === "num") {
-    const selectedSuite = suites.find(suite => suite.number === $("num").value);
+    const selectedSuite = matches.find(
+      suite => suite.number === $("num").value
+    ) || suites.find(suite => suite.number === $("num").value);
     $("type").value = selectedSuite ? selectedSuite.type : "";
   }
 
@@ -68,20 +74,16 @@ function init() {
   $("type").addEventListener("change", renderList);
   $("favorites").addEventListener("change", renderList);
 
+  const pageFlip = $("pageFlip");
+  if (pageFlip) pageFlip.addEventListener("click", togglePartitionView);
+
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") requestWakeLock();
   });
 
-  // iOS can preserve the page's pinch-zoom scale across orientation changes.
-  // Reset the visual viewport whenever the phone changes orientation.
-  window.addEventListener("orientationchange", resetPageZoom);
-  if (screen.orientation && screen.orientation.addEventListener) {
-    screen.orientation.addEventListener("change", resetPageZoom);
-  }
   setupIOSScoreZoom();
   document.addEventListener("pointerdown", requestWakeLock, { once: true });
   document.addEventListener("keydown", requestWakeLock, { once: true });
-
   requestWakeLock();
   renderList();
 }
@@ -96,7 +98,6 @@ function renderList() {
   const type = $("type").value;
   const favoritesOnly = $("favorites").checked;
   const results = $("results");
-
   results.textContent = "";
 
   const filtered = suites.filter(suite =>
@@ -109,7 +110,9 @@ function renderList() {
   filtered.forEach(suite => {
     const button = document.createElement("button");
     button.className = "result" + (active === suite.id ? " active" : "");
-    button.textContent = `#${suite.number} [${suite.type}] · ${suite.tunes.map(tune => tune.title).join(" · ")}`;
+    button.textContent = `#${suite.number} [${suite.type}] · ${suite.tunes
+      .map(tune => tune.title)
+      .join(" · ")}`;
     button.onclick = () => showSuite(suite);
     results.appendChild(button);
   });
@@ -124,62 +127,130 @@ function renderList() {
 
 function showSuite(suite) {
   active = suite.id;
+  activeSuite = suite;
+  fullPartitionMode = false;
+  resetScoreZoom();
+
   const viewer = $("viewer");
   viewer.textContent = "";
   viewer.scrollTop = 0;
 
   const head = document.createElement("div");
   head.className = "suitehead";
-
   const title = document.createElement("h2");
   title.textContent = `Suite ${suite.number}`;
-
   const type = document.createElement("span");
   type.textContent = suite.type;
-
   head.append(title, type);
   viewer.append(head);
   suite.tunes.forEach(tune => viewer.append(tuneCard(tune)));
 
-  $("sheet").src = suite.partition;
-  $("sheet").alt = `Partition suite ${suite.number}`;
   $("landscapeTitle").textContent = `Suite#${suite.number}`;
-  $("landscape").classList.add("has-sheet");
+  showSimplePartition();
+  checkFullPartition(suite);
+  renderList();
+}
 
-  $("sheet").onerror = () => {
-    $("landscape").classList.remove("has-sheet");
+function showSimplePartition() {
+  if (!activeSuite) return;
+  fullPartitionMode = false;
+  resetScoreZoom();
+
+  const landscape = $("landscape");
+  const sheet = $("sheet");
+  const viewport = $("sheetViewport");
+  const button = $("pageFlip");
+
+  landscape.classList.remove("full-partition");
+  if (viewport) {
+    viewport.scrollTop = 0;
+    viewport.scrollLeft = 0;
+  }
+  sheet.src = activeSuite.partition;
+  sheet.alt = `Partition simplifiée suite ${activeSuite.number}`;
+
+  if (button) {
+    button.classList.remove("active");
+    button.setAttribute("aria-label", "Afficher la partition complète");
+    button.title = "Afficher la partition complète";
+  }
+
+  sheet.onload = () => landscape.classList.add("has-sheet");
+  sheet.onerror = () => {
+    landscape.classList.remove("has-sheet");
     $("sheetMessage").textContent = "Partition non disponible pour cette suite.";
   };
+}
 
-  renderList();
+function showFullPartition() {
+  if (!activeSuite || !activeSuite.partitionFull) return;
+  fullPartitionMode = true;
+  resetScoreZoom();
+
+  const landscape = $("landscape");
+  const sheet = $("sheet");
+  const viewport = $("sheetViewport");
+  const button = $("pageFlip");
+
+  landscape.classList.add("full-partition");
+  if (viewport) {
+    viewport.scrollTop = 0;
+    viewport.scrollLeft = 0;
+  }
+  sheet.src = activeSuite.partitionFull;
+  sheet.alt = `Partition complète suite ${activeSuite.number}`;
+
+  if (button) {
+    button.classList.add("active");
+    button.setAttribute("aria-label", "Revenir à la partition simplifiée");
+    button.title = "Revenir à la partition simplifiée";
+  }
+}
+
+function togglePartitionView() {
+  if (!activeSuite || !activeSuite.partitionFull) return;
+  fullPartitionMode ? showSimplePartition() : showFullPartition();
+}
+
+function checkFullPartition(suite) {
+  const button = $("pageFlip");
+  if (!button) return;
+  button.hidden = true;
+  if (!suite.partitionFull) return;
+
+  const probe = new Image();
+  probe.onload = () => {
+    if (activeSuite && activeSuite.id === suite.id) button.hidden = false;
+  };
+  probe.onerror = () => {
+    if (activeSuite && activeSuite.id === suite.id) button.hidden = true;
+  };
+  probe.src = suite.partitionFull;
 }
 
 function audioUrl(audio) {
   const source = audio.file || audio.url;
   if (!source) return source;
 
-  // Keep any explicit Cloudflare R2 URL unchanged.
   if (/^https:\/\/pub-20152a597afa4e8187f753b29a2a6c46\.r2\.dev\//i.test(source)) {
     return source;
   }
 
-  // repertoire.json stores relative paths. If an older absolute GitHub audio URL
-  // is encountered, recover the path after /main/ before pointing it to R2.
   let path = source;
   if (/^https?:\/\//i.test(path)) {
-    const marker = '/main/';
-    const i = path.indexOf(marker);
-    if (i >= 0) path = decodeURIComponent(path.slice(i + marker.length));
+    const marker = "/main/";
+    const index = path.indexOf(marker);
+    if (index >= 0) path = decodeURIComponent(path.slice(index + marker.length));
     else return path;
   }
 
   const encodedPath = path
-    .replace(/\\/g, '/')
-    .split('/')
+    .replace(/\\/g, "/")
+    .split("/")
     .map(segment => encodeURIComponent(segment))
-    .join('/');
+    .join("/");
 
-  return 'https://pub-20152a597afa4e8187f753b29a2a6c46.r2.dev/' + encodedPath;
+  return "https://pub-20152a597afa4e8187f753b29a2a6c46.r2.dev/" + encodedPath;
 }
 
 function tuneCard(tune) {
@@ -188,7 +259,6 @@ function tuneCard(tune) {
 
   const row = document.createElement("div");
   row.className = "tune-title";
-
   const title = document.createElement("h3");
   title.textContent = tune.title;
 
@@ -217,7 +287,6 @@ function tuneCard(tune) {
   tune.audio.forEach(recording => {
     const block = document.createElement("div");
     block.className = "audio-block";
-
     const label = document.createElement("p");
     label.className = "audio-label";
     label.textContent = recording.label || "Enregistrement";
@@ -270,14 +339,16 @@ function resetScoreZoom() {
   const sheet = $("sheet");
   if (sheet) sheet.style.transform = "scale(1)";
   const area = $("sheetViewport");
-  if (area) { area.scrollLeft = 0; area.scrollTop = 0; }
+  if (area) {
+    area.scrollLeft = 0;
+    area.scrollTop = 0;
+  }
 }
 
 function setupIOSScoreZoom() {
   const area = $("sheetViewport");
   if (!area) return;
 
-  // iOS-specific gesture events: zoom only the score, never Safari's viewport.
   area.addEventListener("gesturestart", event => {
     scoreZoomStart = scoreZoom;
     event.preventDefault();
@@ -296,7 +367,6 @@ function setupIOSScoreZoom() {
     event.stopPropagation();
   }, { passive: false });
 
-  // Critical on iOS: never allow an unhandled pinch to zoom the whole PWA.
   const blockPageZoom = event => event.preventDefault();
   document.addEventListener("gesturestart", blockPageZoom, { passive: false });
   document.addEventListener("gesturechange", blockPageZoom, { passive: false });
@@ -307,12 +377,6 @@ function setupIOSScoreZoom() {
   if (screen.orientation && screen.orientation.addEventListener) {
     screen.orientation.addEventListener("change", resetAfterRotation);
   }
-}
-
-function resetPageZoom() {
-  // Kept for orientation listeners from older versions.
-  // Zoom is now isolated to the score and the page viewport is never scaled.
-  resetScoreZoom();
 }
 
 async function requestWakeLock() {
