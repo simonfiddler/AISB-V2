@@ -6,6 +6,12 @@ let wakeLock = null;
 let currentAudio = null;
 let scoreZoom = 1;
 let scoreZoomStart = 1;
+let scoreBaseWidth = 0;
+let scoreBaseHeight = 0;
+let zoomFocusX = 0;
+let zoomFocusY = 0;
+let zoomScreenX = 0;
+let zoomScreenY = 0;
 
 const $ = id => document.getElementById(id);
 const norm = value => (value || "")
@@ -168,7 +174,10 @@ function showSimplePartition() {
     button.setAttribute("aria-label", "Afficher la partition complète");
     button.title = "Afficher la partition complète";
   }
-  sheet.onload = () => landscape.classList.add("has-sheet");
+  sheet.onload = () => {
+    landscape.classList.add("has-sheet");
+    prepareScoreView();
+  };
   sheet.onerror = () => {
     landscape.classList.remove("has-sheet");
     $("sheetMessage").textContent = "Partition non disponible pour cette suite.";
@@ -187,6 +196,10 @@ function showFullPartition() {
   if (viewport) { viewport.scrollTop = 0; viewport.scrollLeft = 0; }
   sheet.src = activeSuite.partitionFull;
   sheet.alt = `Partition complète suite ${activeSuite.number}`;
+  sheet.onload = () => {
+    landscape.classList.add("has-sheet");
+    prepareScoreView();
+  };
   if (button) {
     button.classList.add("active");
     button.setAttribute("aria-label", "Revenir à la partition simplifiée");
@@ -317,36 +330,93 @@ function tuneCard(tune) {
   return section;
 }
 
-function applyScoreZoom() {
+function measureScoreBase() {
+  const area = $("sheetViewport");
   const sheet = $("sheet");
-  if (!sheet) return;
-  sheet.style.transform = `scale(${scoreZoom})`;
-  sheet.style.transformOrigin = "center center";
+  if (!area || !sheet || !sheet.naturalWidth || !sheet.naturalHeight) return;
+
+  const ratio = sheet.naturalWidth / sheet.naturalHeight;
+  if (fullPartitionMode) {
+    scoreBaseWidth = area.clientWidth;
+    scoreBaseHeight = scoreBaseWidth / ratio;
+  } else {
+    scoreBaseWidth = Math.min(area.clientWidth, area.clientHeight * ratio);
+    scoreBaseHeight = scoreBaseWidth / ratio;
+  }
+}
+
+function applyScoreZoom(keepFocus = false) {
+  const area = $("sheetViewport");
+  const sheet = $("sheet");
+  if (!area || !sheet) return;
+  if (!scoreBaseWidth || !scoreBaseHeight) measureScoreBase();
+
+  sheet.style.transform = "none";
+  sheet.style.width = `${scoreBaseWidth * scoreZoom}px`;
+  sheet.style.height = `${scoreBaseHeight * scoreZoom}px`;
+  sheet.style.objectFit = "fill";
+  sheet.style.margin = fullPartitionMode ? "0" : "auto";
+
+  if (keepFocus) {
+    requestAnimationFrame(() => {
+      area.scrollLeft = Math.max(0, zoomFocusX * scoreZoom - zoomScreenX);
+      area.scrollTop = Math.max(0, zoomFocusY * scoreZoom - zoomScreenY);
+    });
+  }
+}
+
+function prepareScoreView() {
+  scoreZoom = 1;
+  scoreZoomStart = 1;
+  scoreBaseWidth = 0;
+  scoreBaseHeight = 0;
+  const area = $("sheetViewport");
+  if (area) {
+    area.scrollLeft = 0;
+    area.scrollTop = 0;
+  }
+  measureScoreBase();
+  applyScoreZoom();
 }
 
 function resetScoreZoom() {
   scoreZoom = 1;
   scoreZoomStart = 1;
+  scoreBaseWidth = 0;
+  scoreBaseHeight = 0;
   const sheet = $("sheet");
-  if (sheet) sheet.style.transform = "scale(1)";
+  if (sheet) {
+    sheet.style.transform = "none";
+    sheet.style.width = "";
+    sheet.style.height = "";
+    sheet.style.objectFit = "";
+    sheet.style.margin = "";
+  }
   const area = $("sheetViewport");
-  if (area) { area.scrollLeft = 0; area.scrollTop = 0; }
+  if (area) {
+    area.scrollLeft = 0;
+    area.scrollTop = 0;
+  }
 }
 
 function setupIOSScoreZoom() {
   const area = $("sheetViewport");
   if (!area) return;
 
-  // iOS-specific gesture events: zoom only the score, never Safari's viewport.
   area.addEventListener("gesturestart", event => {
     scoreZoomStart = scoreZoom;
+    const rect = area.getBoundingClientRect();
+    zoomScreenX = event.clientX - rect.left;
+    zoomScreenY = event.clientY - rect.top;
+    zoomFocusX = (area.scrollLeft + zoomScreenX) / scoreZoom;
+    zoomFocusY = (area.scrollTop + zoomScreenY) / scoreZoom;
     event.preventDefault();
     event.stopPropagation();
   }, { passive: false });
 
   area.addEventListener("gesturechange", event => {
     scoreZoom = Math.max(1, Math.min(4, scoreZoomStart * event.scale));
-    applyScoreZoom();
+    applyScoreZoom(true);
     event.preventDefault();
     event.stopPropagation();
   }, { passive: false });
@@ -356,13 +426,16 @@ function setupIOSScoreZoom() {
     event.stopPropagation();
   }, { passive: false });
 
-  // Critical on iOS: never allow an unhandled pinch to zoom the whole PWA.
   const blockPageZoom = event => event.preventDefault();
   document.addEventListener("gesturestart", blockPageZoom, { passive: false });
   document.addEventListener("gesturechange", blockPageZoom, { passive: false });
   document.addEventListener("gestureend", blockPageZoom, { passive: false });
 
-  const resetAfterRotation = () => setTimeout(resetScoreZoom, 100);
+  const resetAfterRotation = () => setTimeout(() => {
+    resetScoreZoom();
+    const sheet = $("sheet");
+    if (sheet && sheet.complete) prepareScoreView();
+  }, 120);
   window.addEventListener("orientationchange", resetAfterRotation);
   if (screen.orientation && screen.orientation.addEventListener) {
     screen.orientation.addEventListener("change", resetAfterRotation);

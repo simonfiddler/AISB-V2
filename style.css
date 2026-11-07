@@ -4,3 +4,28 @@
 html,body{touch-action:pan-x pan-y}
 @media(orientation:portrait){.portrait,.viewer-pane,.controls,.results{touch-action:pan-y}}
 @media(orientation:landscape){.sheet-viewport{touch-action:none}.sheet{will-change:transform}}
+
+/* Score viewer v13: native two-axis scrolling plus focal pinch zoom. */
+@media(orientation:landscape){
+  .sheet-viewport,
+  .landscape.full-partition .sheet-viewport{
+    display:block;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+    touch-action:pan-x pan-y;
+    text-align:center;
+    background:#fff;
+  }
+  .sheet,
+  .landscape.full-partition .sheet{
+    display:block;
+    max-width:none;
+    min-width:0;
+    min-height:0;
+    transform:none;
+    transform-origin:top left;
+  }
+}
