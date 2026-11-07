@@ -1,4 +1,4 @@
-const CACHE = "aisb-v2-ui-6";
+const CACHE = "aisb-v2-ui-7";
 
 const SHELL = [
   "./",
@@ -14,35 +14,24 @@ const SHELL = [
 
 self.addEventListener("install", event => {
   self.skipWaiting();
-  event.waitUntil(
-    caches.open(CACHE).then(cache => cache.addAll(SHELL))
-  );
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)));
 });
 
 self.addEventListener("activate", event => {
-  event.waitUntil(
-    Promise.all([
-      self.clients.claim(),
-      caches.keys().then(keys =>
-        Promise.all(
-          keys.filter(key => key !== CACHE).map(key => caches.delete(key))
-        )
-      )
-    ])
-  );
+  event.waitUntil(Promise.all([
+    self.clients.claim(),
+    caches.keys().then(keys => Promise.all(
+      keys.filter(key => key !== CACHE).map(key => caches.delete(key))
+    ))
+  ]));
 });
 
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
-
   const url = new URL(event.request.url);
 
-  // Never proxy/cache audio through the service worker.
-  // Safari must talk directly to R2 for media range requests.
   if (url.pathname.toLowerCase().endsWith(".mp3")) return;
 
-  // Same-origin PWA assets: network first so GitHub updates are immediate,
-  // with cache fallback for offline use.
   if (url.origin === self.location.origin) {
     event.respondWith(
       fetch(event.request)
