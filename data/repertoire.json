@@ -140,7 +140,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_02.png"
     },
     {
       "id": "suite-03",
@@ -208,7 +209,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_03.png"
     },
     {
       "id": "suite-04",
@@ -256,7 +258,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_04.png"
     },
     {
       "id": "suite-05",
@@ -324,7 +327,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_05.png"
     },
     {
       "id": "suite-06",
@@ -372,7 +376,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_06.png"
     },
     {
       "id": "suite-07",
@@ -440,7 +445,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_07.png"
     },
     {
       "id": "suite-08",
@@ -488,7 +494,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_08.png"
     },
     {
       "id": "suite-09",
@@ -543,7 +550,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_09.png"
     },
     {
       "id": "suite-10",
@@ -610,7 +618,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_10.png"
     },
     {
       "id": "suite-11",
@@ -670,7 +679,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_11.png"
     },
     {
       "id": "suite-12",
@@ -738,7 +748,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_12.png"
     },
     {
       "id": "suite-13",
@@ -786,7 +797,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_13.png"
     },
     {
       "id": "suite-14",
@@ -858,7 +870,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_14.png"
     },
     {
       "id": "suite-15",
@@ -930,7 +943,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_15.png"
     },
     {
       "id": "suite-16",
@@ -998,7 +1012,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_16.png"
     },
     {
       "id": "suite-17",
@@ -1066,7 +1081,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_17.png"
     },
     {
       "id": "suite-18",
@@ -1114,7 +1130,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_18.png"
     },
     {
       "id": "suite-19",
@@ -1174,7 +1191,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_19.png"
     },
     {
       "id": "suite-20",
@@ -1242,7 +1260,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_20.png"
     },
     {
       "id": "suite-21",
@@ -1310,7 +1329,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_21.png"
     },
     {
       "id": "suite-22",
@@ -1365,7 +1385,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_22.png"
     },
     {
       "id": "suite-23",
@@ -1433,7 +1454,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_23.png"
     },
     {
       "id": "suite-24",
@@ -1509,7 +1531,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_24.png"
     },
     {
       "id": "suite-25",
@@ -1557,7 +1580,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_25.png"
     },
     {
       "id": "suite-26",
@@ -1605,7 +1629,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_26.png"
     },
     {
       "id": "suite-27",
@@ -1673,7 +1698,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_27.png"
     },
     {
       "id": "suite-28",
@@ -1741,7 +1767,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_28.png"
     },
     {
       "id": "suite-29",
@@ -1763,7 +1790,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_29.png"
     },
     {
       "id": "suite-30",
@@ -1797,7 +1825,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_30.png"
     },
     {
       "id": "suite-31",
@@ -1844,7 +1873,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_31.png"
     },
     {
       "id": "suite-32",
@@ -1866,7 +1896,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_32.png"
     },
     {
       "id": "suite-33",
@@ -1895,7 +1926,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_33.png"
     },
     {
       "id": "suite-34",
@@ -1929,7 +1961,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_34.png"
     },
     {
       "id": "suite-35",
@@ -1958,7 +1991,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_35.png"
     },
     {
       "id": "suite-36",
@@ -1985,7 +2019,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_36.png"
     },
     {
       "id": "suite-37",
@@ -2014,7 +2049,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_37.png"
     },
     {
       "id": "suite-38",
@@ -2043,7 +2079,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_38.png"
     },
     {
       "id": "suite-39",
@@ -2072,7 +2109,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_39.png"
     },
     {
       "id": "suite-40",
@@ -2101,7 +2139,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_40.png"
     },
     {
       "id": "suite-41",
@@ -2123,7 +2162,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_41.png"
     },
     {
       "id": "suite-42",
@@ -2152,7 +2192,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_42.png"
     },
     {
       "id": "suite-43",
@@ -2208,7 +2249,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_43.png"
     },
     {
       "id": "suite-44",
@@ -2237,7 +2279,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_44.png"
     },
     {
       "id": "suite-45",
@@ -2266,7 +2309,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_45.png"
     },
     {
       "id": "suite-46",
@@ -2288,7 +2332,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_46.png"
     },
     {
       "id": "suite-47",
@@ -2317,7 +2362,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_47.png"
     },
     {
       "id": "suite-48",
@@ -2339,7 +2385,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_48.png"
     },
     {
       "id": "suite-49",
@@ -2361,7 +2408,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_49.png"
     },
     {
       "id": "suite-50",
@@ -2390,7 +2438,8 @@
           "notes": "",
           "audio": []
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_50.png"
     }
   ]
 }
