@@ -1,4 +1,4 @@
-const CACHE="aisb-v2-ui-9";
+const CACHE="aisb-v2-ui-10";
 const SHELL=["./","./index.html","./app.js","./style.css","./data/repertoire.json","./manifest.webmanifest","./icons/icon-180.png","./icons/icon-192.png","./icons/icon-512.png"];
 self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)))});
 self.addEventListener("activate",e=>{e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))]))});
