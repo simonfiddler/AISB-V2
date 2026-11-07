@@ -33,27 +33,23 @@ function searchMatches() {
 function syncFilters(source) {
   const matches = searchMatches();
   const oldNumber = $("num").value;
-  const oldType = $("type").value;
   const availableNumbers = matches.map(suite => suite.number);
-  const availableTypes = [...new Set(matches.map(suite => suite.type))].sort();
 
   replaceOptions($("num"), availableNumbers, oldNumber);
-  replaceOptions($("type"), availableTypes, oldType);
 
   if (source === "search") {
     if (matches.length === 1) {
       $("num").value = matches[0].number;
       $("type").value = matches[0].type;
     } else {
+      const types = [...new Set(matches.map(suite => suite.type))];
       $("num").value = "";
-      $("type").value = availableTypes.length === 1 ? availableTypes[0] : "";
+      $("type").value = types.length === 1 ? types[0] : "";
     }
   }
 
   if (source === "num") {
-    const selectedSuite = matches.find(
-      suite => suite.number === $("num").value
-    );
+    const selectedSuite = suites.find(suite => suite.number === $("num").value);
     $("type").value = selectedSuite ? selectedSuite.type : "";
   }
 
@@ -103,9 +99,7 @@ function renderList() {
   filtered.forEach(suite => {
     const button = document.createElement("button");
     button.className = "result" + (active === suite.id ? " active" : "");
-    button.textContent = `#${suite.number} [${suite.type}] · ${suite.tunes
-      .map(tune => tune.title)
-      .join(" · ")}`;
+    button.textContent = `#${suite.number} [${suite.type}] · ${suite.tunes.map(tune => tune.title).join(" · ")}`;
     button.onclick = () => showSuite(suite);
     results.appendChild(button);
   });
@@ -152,15 +146,30 @@ function showSuite(suite) {
 
 function audioUrl(audio) {
   const source = audio.file || audio.url;
-  if (!source || /^https?:\/\//i.test(source)) return source;
+  if (!source) return source;
 
-  const encodedPath = source
-    .replace(/\\/g, "/")
-    .split("/")
+  // Keep any explicit Cloudflare R2 URL unchanged.
+  if (/^https:\/\/pub-20152a597afa4e8187f753b29a2a6c46\.r2\.dev\//i.test(source)) {
+    return source;
+  }
+
+  // repertoire.json stores relative paths. If an older absolute GitHub audio URL
+  // is encountered, recover the path after /main/ before pointing it to R2.
+  let path = source;
+  if (/^https?:\/\//i.test(path)) {
+    const marker = '/main/';
+    const i = path.indexOf(marker);
+    if (i >= 0) path = decodeURIComponent(path.slice(i + marker.length));
+    else return path;
+  }
+
+  const encodedPath = path
+    .replace(/\\/g, '/')
+    .split('/')
     .map(segment => encodeURIComponent(segment))
-    .join("/");
+    .join('/');
 
-  return "https://media.githubusercontent.com/media/simonfiddler/AISB-V2/main/" + encodedPath;
+  return 'https://pub-20152a597afa4e8187f753b29a2a6c46.r2.dev/' + encodedPath;
 }
 
 function tuneCard(tune) {
@@ -207,29 +216,24 @@ function tuneCard(tune) {
     audio.controls = true;
     audio.preload = "metadata";
     audio.src = audioUrl(recording);
-
     audio.addEventListener("play", () => {
       if (currentAudio && currentAudio !== audio) currentAudio.pause();
       currentAudio = audio;
       requestWakeLock();
     });
-
     audio.addEventListener("ended", () => {
       if (currentAudio === audio) currentAudio = null;
     });
 
     const speed = document.createElement("div");
     speed.className = "speed";
-
     [0.5, 0.75, 1].forEach(rate => {
       const button = document.createElement("button");
       button.type = "button";
       button.textContent = `${rate * 100} %`;
       button.onclick = () => {
         audio.playbackRate = rate;
-        speed
-          .querySelectorAll("button")
-          .forEach(item => item.classList.remove("selected"));
+        speed.querySelectorAll("button").forEach(item => item.classList.remove("selected"));
         button.classList.add("selected");
       };
       if (rate === 1) button.classList.add("selected");
@@ -271,7 +275,5 @@ fetch("data/repertoire.json")
   });
 
 if ("serviceWorker" in navigator) {
-  addEventListener("load", () =>
-    navigator.serviceWorker.register("./service-worker.js")
-  );
+  addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js"));
 }
