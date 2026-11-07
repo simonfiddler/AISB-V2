@@ -2,6 +2,8 @@ let suites = [];
 let active = null;
 let wakeLock = null;
 let currentAudio = null;
+let fullPartitionMode = false;
+let activeSuite = null;
 
 const $ = id => document.getElementById(id);
 const norm = value => (value || "")
@@ -33,23 +35,25 @@ function searchMatches() {
 function syncFilters(source) {
   const matches = searchMatches();
   const oldNumber = $("num").value;
+  const oldType = $("type").value;
   const availableNumbers = matches.map(suite => suite.number);
+  const availableTypes = [...new Set(matches.map(suite => suite.type))].sort();
 
   replaceOptions($("num"), availableNumbers, oldNumber);
+  replaceOptions($("type"), availableTypes, oldType);
 
   if (source === "search") {
     if (matches.length === 1) {
       $("num").value = matches[0].number;
       $("type").value = matches[0].type;
     } else {
-      const types = [...new Set(matches.map(suite => suite.type))];
       $("num").value = "";
-      $("type").value = types.length === 1 ? types[0] : "";
+      $("type").value = availableTypes.length === 1 ? availableTypes[0] : "";
     }
   }
 
   if (source === "num") {
-    const selectedSuite = suites.find(suite => suite.number === $("num").value);
+    const selectedSuite = matches.find(suite => suite.number === $("num").value);
     $("type").value = selectedSuite ? selectedSuite.type : "";
   }
 
@@ -65,6 +69,7 @@ function init() {
   $("num").addEventListener("change", () => syncFilters("num"));
   $("type").addEventListener("change", renderList);
   $("favorites").addEventListener("change", renderList);
+  $("pageFlip").addEventListener("click", togglePartitionView);
 
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") requestWakeLock();
@@ -114,6 +119,8 @@ function renderList() {
 
 function showSuite(suite) {
   active = suite.id;
+  activeSuite = suite;
+  fullPartitionMode = false;
   const viewer = $("viewer");
   viewer.textContent = "";
   viewer.scrollTop = 0;
@@ -131,17 +138,73 @@ function showSuite(suite) {
   viewer.append(head);
   suite.tunes.forEach(tune => viewer.append(tuneCard(tune)));
 
-  $("sheet").src = suite.partition;
-  $("sheet").alt = `Partition suite ${suite.number}`;
   $("landscapeTitle").textContent = `Suite#${suite.number}`;
-  $("landscape").classList.add("has-sheet");
-
-  $("sheet").onerror = () => {
-    $("landscape").classList.remove("has-sheet");
-    $("sheetMessage").textContent = "Partition non disponible pour cette suite.";
-  };
+  showSimplePartition();
+  checkFullPartition(suite);
 
   renderList();
+}
+
+function showSimplePartition() {
+  if (!activeSuite) return;
+  fullPartitionMode = false;
+  const landscape = $("landscape");
+  const viewport = $("sheetViewport");
+  const sheet = $("sheet");
+  const button = $("pageFlip");
+
+  landscape.classList.remove("full-partition");
+  viewport.scrollTop = 0;
+  viewport.scrollLeft = 0;
+  sheet.src = activeSuite.partition;
+  sheet.alt = `Partition simplifiée suite ${activeSuite.number}`;
+  button.classList.remove("active");
+  button.setAttribute("aria-label", "Afficher la partition complète");
+  button.title = "Afficher la partition complète";
+
+  sheet.onload = () => landscape.classList.add("has-sheet");
+  sheet.onerror = () => {
+    landscape.classList.remove("has-sheet");
+    $("sheetMessage").textContent = "Partition non disponible pour cette suite.";
+  };
+}
+
+function showFullPartition() {
+  if (!activeSuite || !activeSuite.partitionFull) return;
+  fullPartitionMode = true;
+  const landscape = $("landscape");
+  const viewport = $("sheetViewport");
+  const sheet = $("sheet");
+  const button = $("pageFlip");
+
+  landscape.classList.add("full-partition");
+  viewport.scrollTop = 0;
+  viewport.scrollLeft = 0;
+  sheet.src = activeSuite.partitionFull;
+  sheet.alt = `Partition complète suite ${activeSuite.number}`;
+  button.classList.add("active");
+  button.setAttribute("aria-label", "Revenir à la partition simplifiée");
+  button.title = "Revenir à la partition simplifiée";
+}
+
+function togglePartitionView() {
+  if (!activeSuite || !activeSuite.partitionFull) return;
+  fullPartitionMode ? showSimplePartition() : showFullPartition();
+}
+
+function checkFullPartition(suite) {
+  const button = $("pageFlip");
+  button.hidden = true;
+  if (!suite.partitionFull) return;
+
+  const probe = new Image();
+  probe.onload = () => {
+    if (activeSuite && activeSuite.id === suite.id) button.hidden = false;
+  };
+  probe.onerror = () => {
+    if (activeSuite && activeSuite.id === suite.id) button.hidden = true;
+  };
+  probe.src = suite.partitionFull;
 }
 
 function audioUrl(audio) {

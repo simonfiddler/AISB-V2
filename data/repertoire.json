@@ -47,7 +47,8 @@
             }
           ]
         }
-      ]
+      ],
+      "partitionFull": "partitions-completes/Suite_01.png"
     },
     {
       "id": "suite-02",
