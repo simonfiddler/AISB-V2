@@ -18,6 +18,7 @@ let pinchFocusX = 0;
 let pinchFocusY = 0;
 let pinchScreenX = 0;
 let pinchScreenY = 0;
+let gestureStartTime = 0;
 
 const $ = id => document.getElementById(id);
 const norm = value => (value || "")
@@ -49,26 +50,24 @@ function searchMatches() {
 function syncFilters(source) {
   const matches = searchMatches();
   const oldNumber = $("num").value;
+  const oldType = $("type").value;
   const availableNumbers = matches.map(suite => suite.number);
-
+  const availableTypes = [...new Set(matches.map(suite => suite.type))].sort();
   replaceOptions($("num"), availableNumbers, oldNumber);
-
+  replaceOptions($("type"), availableTypes, oldType);
   if (source === "search") {
     if (matches.length === 1) {
       $("num").value = matches[0].number;
       $("type").value = matches[0].type;
     } else {
-      const types = [...new Set(matches.map(suite => suite.type))];
       $("num").value = "";
-      $("type").value = types.length === 1 ? types[0] : "";
+      $("type").value = availableTypes.length === 1 ? availableTypes[0] : "";
     }
   }
-
   if (source === "num") {
     const selectedSuite = suites.find(suite => suite.number === $("num").value);
     $("type").value = selectedSuite ? selectedSuite.type : "";
   }
-
   renderList();
 }
 
@@ -78,6 +77,18 @@ function init() {
   replaceOptions($("num"), suites.map(suite => suite.number), "");
 
   $("search").addEventListener("input", () => syncFilters("search"));
+  const clearSearch = $("clearSearch");
+  if (clearSearch) {
+    const updateClearButton = () => { clearSearch.hidden = !$("search").value; };
+    $("search").addEventListener("input", updateClearButton);
+    clearSearch.addEventListener("click", () => {
+      $("search").value = "";
+      updateClearButton();
+      syncFilters("search");
+      $("search").focus();
+    });
+    updateClearButton();
+  }
   $("num").addEventListener("change", () => syncFilters("num"));
   $("type").addEventListener("change", renderList);
   $("favorites").addEventListener("change", renderList);
@@ -330,6 +341,14 @@ function tuneCard(tune) {
   return section;
 }
 
+function navigateSuite(direction) {
+  if (!activeSuite || !suites.length) return;
+  const index = suites.findIndex(suite => suite.id === activeSuite.id);
+  const nextIndex = index + direction;
+  if (index < 0 || nextIndex < 0 || nextIndex >= suites.length) return;
+  showSuite(suites[nextIndex]);
+}
+
 function touchDistance(touches) {
   const dx = touches[0].clientX - touches[1].clientX;
   const dy = touches[0].clientY - touches[1].clientY;
@@ -424,6 +443,7 @@ function setupIOSScoreZoom() {
       gestureMode = "pan";
       gestureStartX = event.touches[0].clientX;
       gestureStartY = event.touches[0].clientY;
+      gestureStartTime = Date.now();
       gestureStartScrollX = area.scrollLeft;
       gestureStartScrollY = area.scrollTop;
     } else if (event.touches.length === 2) {
@@ -458,11 +478,20 @@ function setupIOSScoreZoom() {
 
   area.addEventListener("touchend", event => {
     if (event.touches.length === 0) {
+      if (gestureMode === "pan" && event.changedTouches.length === 1 && scoreZoom === 1) {
+        const dx = event.changedTouches[0].clientX - gestureStartX;
+        const dy = event.changedTouches[0].clientY - gestureStartY;
+        const elapsed = Date.now() - gestureStartTime;
+        if (elapsed < 700 && Math.abs(dx) >= 70 && Math.abs(dx) > Math.abs(dy) * 1.35) {
+          navigateSuite(dx < 0 ? 1 : -1);
+        }
+      }
       gestureMode = null;
     } else if (event.touches.length === 1) {
       gestureMode = "pan";
       gestureStartX = event.touches[0].clientX;
       gestureStartY = event.touches[0].clientY;
+      gestureStartTime = Date.now();
       gestureStartScrollX = area.scrollLeft;
       gestureStartScrollY = area.scrollTop;
     }

@@ -16,15 +16,16 @@
     <img src="icons/icon-192.png" alt="">
     <h1>AISB · Recueil Irlandais</h1>
   </header>
-
   <div id="portrait" class="portrait">
     <main id="viewer" class="viewer-pane">
       <p class="muted">Sélectionnez une suite pour afficher les morceaux et les enregistrements.</p>
     </main>
     <aside class="controls">
       <div class="filter-zone">
-        <label for="search">Recherche morceau</label>
-        <input id="search" type="search" placeholder="Ex. Father Kelly" autocomplete="off">
+        <div class="search-wrap">
+          <input id="search" type="search" placeholder="Tune..." autocomplete="off" aria-label="Rechercher un tune">
+          <button id="clearSearch" class="clear-search" type="button" aria-label="Effacer la recherche" title="Effacer" hidden>×</button>
+        </div>
         <div class="row">
           <div>
             <label for="num">Set#</label>
@@ -40,7 +41,6 @@
       <div id="results" class="results"></div>
     </aside>
   </div>
-
   <div id="landscape" class="landscape">
     <div id="landscapeTitle" class="landscape-title" aria-live="polite"></div>
     <button id="pageFlip" class="page-flip" type="button" aria-label="Afficher la partition complète" title="Afficher la partition complète" hidden>
@@ -55,7 +55,6 @@
     </div>
     <p id="sheetMessage" class="muted">Sélectionnez d'abord une suite en mode vertical, puis tournez le téléphone.</p>
   </div>
-
   <script src="app.js"></script>
 </body>
 </html>
