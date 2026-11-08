@@ -5,13 +5,19 @@ let fullPartitionMode = false;
 let wakeLock = null;
 let currentAudio = null;
 let scoreZoom = 1;
-let scoreZoomStart = 1;
 let scoreBaseWidth = 0;
 let scoreBaseHeight = 0;
-let zoomFocusX = 0;
-let zoomFocusY = 0;
-let zoomScreenX = 0;
-let zoomScreenY = 0;
+let gestureMode = null;
+let gestureStartX = 0;
+let gestureStartY = 0;
+let gestureStartScrollX = 0;
+let gestureStartScrollY = 0;
+let pinchStartDistance = 0;
+let pinchStartScale = 1;
+let pinchFocusX = 0;
+let pinchFocusY = 0;
+let pinchScreenX = 0;
+let pinchScreenY = 0;
 
 const $ = id => document.getElementById(id);
 const norm = value => (value || "")
@@ -80,12 +86,6 @@ function init() {
     if (document.visibilityState === "visible") requestWakeLock();
   });
 
-  // iOS can preserve the page's pinch-zoom scale across orientation changes.
-  // Reset the visual viewport whenever the phone changes orientation.
-  window.addEventListener("orientationchange", resetPageZoom);
-  if (screen.orientation && screen.orientation.addEventListener) {
-    screen.orientation.addEventListener("change", resetPageZoom);
-  }
   setupIOSScoreZoom();
   const pageFlip = $("pageFlip");
   if (pageFlip) pageFlip.addEventListener("click", togglePartitionView);
@@ -330,11 +330,23 @@ function tuneCard(tune) {
   return section;
 }
 
+function touchDistance(touches) {
+  const dx = touches[0].clientX - touches[1].clientX;
+  const dy = touches[0].clientY - touches[1].clientY;
+  return Math.hypot(dx, dy);
+}
+
+function touchCenter(touches, rect) {
+  return {
+    x: (touches[0].clientX + touches[1].clientX) / 2 - rect.left,
+    y: (touches[0].clientY + touches[1].clientY) / 2 - rect.top
+  };
+}
+
 function measureScoreBase() {
   const area = $("sheetViewport");
   const sheet = $("sheet");
   if (!area || !sheet || !sheet.naturalWidth || !sheet.naturalHeight) return;
-
   const ratio = sheet.naturalWidth / sheet.naturalHeight;
   if (fullPartitionMode) {
     scoreBaseWidth = area.clientWidth;
@@ -345,85 +357,116 @@ function measureScoreBase() {
   }
 }
 
-function applyScoreZoom(keepFocus = false) {
+function renderScore() {
   const area = $("sheetViewport");
+  const stage = $("sheetStage");
   const sheet = $("sheet");
-  if (!area || !sheet) return;
+  if (!area || !stage || !sheet) return;
   if (!scoreBaseWidth || !scoreBaseHeight) measureScoreBase();
 
-  sheet.style.transform = "none";
-  sheet.style.width = `${scoreBaseWidth * scoreZoom}px`;
-  sheet.style.height = `${scoreBaseHeight * scoreZoom}px`;
-  sheet.style.objectFit = "fill";
-  sheet.style.margin = fullPartitionMode ? "0" : "auto";
+  const width = scoreBaseWidth * scoreZoom;
+  const height = scoreBaseHeight * scoreZoom;
+  const stageWidth = Math.max(area.clientWidth, width);
+  const stageHeight = Math.max(area.clientHeight, height);
+  const left = Math.max(0, (stageWidth - width) / 2);
+  const top = Math.max(0, (stageHeight - height) / 2);
 
-  if (keepFocus) {
-    requestAnimationFrame(() => {
-      area.scrollLeft = Math.max(0, zoomFocusX * scoreZoom - zoomScreenX);
-      area.scrollTop = Math.max(0, zoomFocusY * scoreZoom - zoomScreenY);
-    });
-  }
+  stage.style.width = `${stageWidth}px`;
+  stage.style.height = `${stageHeight}px`;
+  sheet.style.left = `${left}px`;
+  sheet.style.top = `${top}px`;
+  sheet.style.width = `${width}px`;
+  sheet.style.height = `${height}px`;
+}
+
+function imageOffset() {
+  const area = $("sheetViewport");
+  const width = scoreBaseWidth * scoreZoom;
+  const height = scoreBaseHeight * scoreZoom;
+  return {
+    x: Math.max(0, (Math.max(area.clientWidth, width) - width) / 2),
+    y: Math.max(0, (Math.max(area.clientHeight, height) - height) / 2)
+  };
 }
 
 function prepareScoreView() {
   scoreZoom = 1;
-  scoreZoomStart = 1;
   scoreBaseWidth = 0;
   scoreBaseHeight = 0;
   const area = $("sheetViewport");
-  if (area) {
-    area.scrollLeft = 0;
-    area.scrollTop = 0;
-  }
+  if (area) { area.scrollLeft = 0; area.scrollTop = 0; }
   measureScoreBase();
-  applyScoreZoom();
+  renderScore();
 }
 
 function resetScoreZoom() {
   scoreZoom = 1;
-  scoreZoomStart = 1;
   scoreBaseWidth = 0;
   scoreBaseHeight = 0;
+  gestureMode = null;
+  const stage = $("sheetStage");
   const sheet = $("sheet");
+  if (stage) { stage.style.width = ""; stage.style.height = ""; }
   if (sheet) {
-    sheet.style.transform = "none";
-    sheet.style.width = "";
-    sheet.style.height = "";
-    sheet.style.objectFit = "";
-    sheet.style.margin = "";
+    sheet.style.left = ""; sheet.style.top = "";
+    sheet.style.width = ""; sheet.style.height = "";
   }
   const area = $("sheetViewport");
-  if (area) {
-    area.scrollLeft = 0;
-    area.scrollTop = 0;
-  }
+  if (area) { area.scrollLeft = 0; area.scrollTop = 0; }
 }
 
 function setupIOSScoreZoom() {
   const area = $("sheetViewport");
   if (!area) return;
 
-  area.addEventListener("gesturestart", event => {
-    scoreZoomStart = scoreZoom;
-    const rect = area.getBoundingClientRect();
-    zoomScreenX = event.clientX - rect.left;
-    zoomScreenY = event.clientY - rect.top;
-    zoomFocusX = (area.scrollLeft + zoomScreenX) / scoreZoom;
-    zoomFocusY = (area.scrollTop + zoomScreenY) / scoreZoom;
+  area.addEventListener("touchstart", event => {
+    if (event.touches.length === 1) {
+      gestureMode = "pan";
+      gestureStartX = event.touches[0].clientX;
+      gestureStartY = event.touches[0].clientY;
+      gestureStartScrollX = area.scrollLeft;
+      gestureStartScrollY = area.scrollTop;
+    } else if (event.touches.length === 2) {
+      gestureMode = "pinch";
+      pinchStartDistance = touchDistance(event.touches);
+      pinchStartScale = scoreZoom;
+      const rect = area.getBoundingClientRect();
+      const center = touchCenter(event.touches, rect);
+      const offset = imageOffset();
+      pinchScreenX = center.x;
+      pinchScreenY = center.y;
+      pinchFocusX = (area.scrollLeft + center.x - offset.x) / scoreZoom;
+      pinchFocusY = (area.scrollTop + center.y - offset.y) / scoreZoom;
+    }
     event.preventDefault();
-    event.stopPropagation();
   }, { passive: false });
 
-  area.addEventListener("gesturechange", event => {
-    scoreZoom = Math.max(1, Math.min(4, scoreZoomStart * event.scale));
-    applyScoreZoom(true);
+  area.addEventListener("touchmove", event => {
+    if (gestureMode === "pan" && event.touches.length === 1) {
+      area.scrollLeft = gestureStartScrollX - (event.touches[0].clientX - gestureStartX);
+      area.scrollTop = gestureStartScrollY - (event.touches[0].clientY - gestureStartY);
+    } else if (gestureMode === "pinch" && event.touches.length === 2) {
+      const ratio = touchDistance(event.touches) / pinchStartDistance;
+      scoreZoom = Math.max(1, Math.min(4, pinchStartScale * ratio));
+      renderScore();
+      const offset = imageOffset();
+      area.scrollLeft = Math.max(0, offset.x + pinchFocusX * scoreZoom - pinchScreenX);
+      area.scrollTop = Math.max(0, offset.y + pinchFocusY * scoreZoom - pinchScreenY);
+    }
     event.preventDefault();
-    event.stopPropagation();
   }, { passive: false });
 
-  area.addEventListener("gestureend", event => {
+  area.addEventListener("touchend", event => {
+    if (event.touches.length === 0) {
+      gestureMode = null;
+    } else if (event.touches.length === 1) {
+      gestureMode = "pan";
+      gestureStartX = event.touches[0].clientX;
+      gestureStartY = event.touches[0].clientY;
+      gestureStartScrollX = area.scrollLeft;
+      gestureStartScrollY = area.scrollTop;
+    }
     event.preventDefault();
-    event.stopPropagation();
   }, { passive: false });
 
   const blockPageZoom = event => event.preventDefault();
@@ -434,7 +477,7 @@ function setupIOSScoreZoom() {
   const resetAfterRotation = () => setTimeout(() => {
     resetScoreZoom();
     const sheet = $("sheet");
-    if (sheet && sheet.complete) prepareScoreView();
+    if (sheet && sheet.complete && sheet.naturalWidth) prepareScoreView();
   }, 120);
   window.addEventListener("orientationchange", resetAfterRotation);
   if (screen.orientation && screen.orientation.addEventListener) {
@@ -443,8 +486,6 @@ function setupIOSScoreZoom() {
 }
 
 function resetPageZoom() {
-  // Kept for orientation listeners from older versions.
-  // Zoom is now isolated to the score and the page viewport is never scaled.
   resetScoreZoom();
 }
 
