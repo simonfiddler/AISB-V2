@@ -14,7 +14,7 @@ const SHELL = [
 
 const pad2 = n => String(n).padStart(2, "0");
 const SHORT_SCORES = Array.from({ length: 50 }, (_, i) => `./partitions/Suite_${pad2(i + 1)}.png`);
-const FULL_SCORES = Array.from({ length: 50 }, (_, i) => `./partitions-full/Suite_${pad2(i + 1)}.png`);
+const FULL_SCORES = Array.from({ length: 50 }, (_, i) => `./partitions-completes/Suite_${pad2(i + 1)}.png`);
 const OFFLINE_ASSETS = [...SHELL, ...SHORT_SCORES, ...FULL_SCORES];
 
 self.addEventListener("install", event => {
@@ -52,7 +52,7 @@ self.addEventListener("fetch", event => {
 
   if (url.origin !== self.location.origin) return;
 
-  const isScore = url.pathname.includes("/partitions/") || url.pathname.includes("/partitions-full/");
+  const isScore = url.pathname.includes("/partitions/") || url.pathname.includes("/partitions-completes/");
 
   if (isScore) {
     event.respondWith(
