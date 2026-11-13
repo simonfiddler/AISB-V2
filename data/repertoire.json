@@ -1666,15 +1666,15 @@
           "audio": [
             {
               "label": "Morceau entier",
-              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 90 Bill Sullivan Entier.mp3"
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 90  Britches Entier.mp3"
             },
             {
               "label": "Partie A",
-              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 01 Bill Sullivan partie A.mp3"
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 01 Britches partie A.mp3"
             },
             {
               "label": "Partie B",
-              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 02 Bill Sullivan partie B.mp3"
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 02 Britches partie B.mp3"
             }
           ]
         },
@@ -1686,16 +1686,18 @@
           "audio": [
             {
               "label": "Morceau entier",
-              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 90  Britches Entier.mp3"
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 90 Bill Sullivan Entier.mp3"
             },
             {
               "label": "Partie A",
-              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 01 Britches partie A.mp3"
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 01 Bill Sullivan partie A.mp3"
             },
             {
               "label": "Partie B",
-              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_03 Britches full of Stitches/02703 02 Britches partie B.mp3"
+              "file": "Suite 027 Jessica_Bill Sullivan_Britches full of Stitches/027_02 Bill Sullivan/02702 02 Bill Sullivan partie B.mp3"
             }
+
+
           ]
         }
       ],
